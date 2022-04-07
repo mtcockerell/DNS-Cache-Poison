@@ -5,7 +5,7 @@ This project is to investigate and reproduce the DNS Cache Poisoning Attack with
 
 ## How to:
 
-### Prerequisities
+### Prerequisites
 
 You will need Docker and Docker Compose installed for this project.
 
@@ -80,7 +80,7 @@ A local authoritative DNS is set up to take the place of upstream DNS servers to
 
 ### Attacker (`10.20.30.4`)
 
-The attcker first sends a DNS query to the DNS cache server (`10.20.30.2`), so the server will send a DNS request to the upstream server and begin accepting responses. Then it sends DNS answers trying all possible QID from the destination impersonating the upstream server (`10.20.30.5`) to the cache server (`10.20.30.2`).
+The attacker first sends a DNS query to the DNS cache server (`10.20.30.2`), so the server will send a DNS request to the upstream server and begin accepting responses. Then it sends DNS answers trying all possible QID from the destination impersonating the upstream server (`10.20.30.5`) to the cache server (`10.20.30.2`).
 
 An attack script (`/attacker/attack.py`) is thereby created.
 
